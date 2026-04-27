@@ -1,0 +1,23 @@
+data:
+  dataset: mnist # mnist
+train:
+  batch_size: 128 #64
+  lr: 0.0003  # lower LR for stabler VAE optimization
+  n_epochs: 100 # longer training for better sample quality
+  num_workers: 4 # change this based on number of cores on your CPU. 4 is sufficient for 1 gpu. If unsure leave at 1.
+network:
+  model: vae # vae, gan, diffusion
+  hidden_dim: 512 #400 stronger encoder/decoder capacity
+  latent_dim: 32 #20 richer latent space for generation
+vae:
+  vae_recon_loss: l2 # l1 or l2
+  beta: 0.1 # 0.01
+diffusion:
+  time_dim: 128
+  timesteps: 500
+optimizer:
+  type: "adamw" # adamw or sgd
+  weight_decay: 0.00 #0.001
+gan:
+  leaky: False
+
