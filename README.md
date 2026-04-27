@@ -3,9 +3,6 @@
 A PyTorch implementation of three core generative model families — Variational Autoencoders (VAE), Generative Adversarial Networks (GAN), and Diffusion Models — trained on MNIST and FashionMNIST.
 
 
-
-
-
 ## Overview
 
 | Model | Dataset | Key Idea |
